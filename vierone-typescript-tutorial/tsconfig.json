@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "ESNext"//kullandığımız kütüphaneler ESNext son versiyon demek 
+           // "DOM" //Dom ise html oluyor 
+        ], 
+        "strict": false  ,  // tip desteğini sağlar // true false-
+        "module": "CommonJS", //derleyeceği dil node.js seçeniği common js oluyor
+        // "alwaysStrict": true ,// use strict desteğini açar
+        "moduleResolution": "Node", // normal kullanıyorsak birşey vermemize gerek yok
+        //  node js kullandığımızda bu modu vermeliyiz cümleden çok bişi anlamadım dediğini not aldım
+        // bunu yani nodejs tiplerini kullanmak için  npm install -D @types/node indirmemiz gerekiyor 
+
+    "esModuleInterop": false, //import yaparken kolaylaştırmayı sağlıyor detayları aşşağıdaki linkte var
+    // https://devnot.com/2021/javascript-modul-sistemi-es-modules-nedir/
+
+    // "target": "ES3" // js nin çok eski sürümlere derlemeye yarar
+    "outDir": "./dist",// nereye çıktı vereceğinni belirtir 
+"rootDir": ""// kaynak kodlarının nerde olduğunu belirtir
+// kaynak kodlarını  terminaldende nerde olduğunu belirtebiliriz 
+}
+}
