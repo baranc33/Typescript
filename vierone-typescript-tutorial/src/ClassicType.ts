@@ -80,3 +80,12 @@ sayi=3;
  const dizi3=[] as Array<string | number>
 
 
+ // bazı değişkenelere değer atamadan kullanılabilir
+ // bu durumda js hata verir bunun önnüne geçmek için tip verirken undifined tipide verilmeli
+ 
+ let aa:number | undefined // undefined yerine null da kullanılabilir
+ aa.toFixed(); 
+
+
+// tuple sabit uzunlukta bir dizimiz olduğunu farz ediyorz 
+const myDizi:[string,string,number]=["hakan","çakır",27];
