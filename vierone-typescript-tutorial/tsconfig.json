@@ -1,4 +1,6 @@
 {
+    // çıktı alırken gibi işlemler yaparken  bu klasörün yerini belirtmemiz gerekir bunun için örnek olarka
+    // tsc --project tsconfig.json // ben bu işlemleri yaparken cmd ekranından yapmadığımda hata alıyorum
     "compilerOptions": {
         "lib": [
             "ESNext"//kullandığımız kütüphaneler ESNext son versiyon demek 
@@ -10,13 +12,17 @@
         "moduleResolution": "Node", // normal kullanıyorsak birşey vermemize gerek yok
         //  node js kullandığımızda bu modu vermeliyiz cümleden çok bişi anlamadım dediğini not aldım
         // bunu yani nodejs tiplerini kullanmak için  npm install -D @types/node indirmemiz gerekiyor 
+        "esModuleInterop": false, //import yaparken kolaylaştırmayı sağlıyor detayları aşşağıdaki linkte var
+        // https://devnot.com/2021/javascript-modul-sistemi-es-modules-nedir/
 
-    "esModuleInterop": false, //import yaparken kolaylaştırmayı sağlıyor detayları aşşağıdaki linkte var
-    // https://devnot.com/2021/javascript-modul-sistemi-es-modules-nedir/
-
-    // "target": "ES3" // js nin çok eski sürümlere derlemeye yarar
-    "outDir": "./dist",// nereye çıktı vereceğinni belirtir 
-"rootDir": ""// kaynak kodlarının nerde olduğunu belirtir
-// kaynak kodlarını  terminaldende nerde olduğunu belirtebiliriz 
-}
+        "target": "ES6",
+        // "target": "ES3" // js nin çok eski sürümlere derlemeye yarar
+        "outDir": "./dist",// nereye çıktı vereceğinni belirtir 
+        "rootDir": "src",// kaynak kodlarının nerde olduğunu belirtir // dizi olarakta belirtebiliriz
+        // kaynak kodlarını  terminaldende nerde olduğunu belirtebiliriz =tsc src/index.ts
+        "downlevelIteration": false,// eksi performans kullanımlarda hata vermesi engeller
+        "noUnusedParameters": true ,// kullanılmayan parametrelerde uyarı verir
+        "noUnusedLocals": true // kullanılmayan değişkenelere uyarı verir
+        
+    }
 }
