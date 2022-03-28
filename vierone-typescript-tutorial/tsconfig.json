@@ -3,8 +3,8 @@
     // tsc --project tsconfig.json // ben bu işlemleri yaparken cmd ekranından yapmadığımda hata alıyorum
     "compilerOptions": {
         "lib": [
-            "ESNext"//kullandığımız kütüphaneler ESNext son versiyon demek 
-           // "DOM" //Dom ise html oluyor 
+            "ESNext",//kullandığımız kütüphaneler ESNext son versiyon demek 
+            "DOM" //Dom ise html oluyor 
         ], 
         "strict": false  ,  // tip desteğini sağlar // true false-
         "module": "CommonJS", //derleyeceği dil node.js seçeniği common js oluyor
