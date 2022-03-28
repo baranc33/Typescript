@@ -65,3 +65,18 @@ sayi=3;
  // ne olduğunu bilemez bunu as yöntemi ile birlikte aşşağıdaki gibi tanıtabiliriz
  const input=document.querySelector('#inpId') as HTMLUListElement ; // bu şekilde kullanabiliriz.
 
+
+
+ // diziler
+
+// const dizi=[];// bu tanımlamada dizi türü any
+// const dizi:string[]=[];// bu şekildede string dizisi olduğunu belirtiriz
+ const dizi=[] as string[];// buda 2. şekil
+
+ // diziye birden fazla tip verme
+ const dizi2:(number | string | boolean)[]=[2,3,true,"hakan"];
+
+ // generic dizi tnaımlama ilerde dah detaylı görcez
+ const dizi3=[] as Array<string | number>
+
+
